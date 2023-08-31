@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style-index.css">
+</head>
+<body>
+    <div class="container my-4">
+        <h1 class="header">My CRUD</h1>
+        <label>Product Name : </label>
+        <input class="form-control  my-2 " id="productNameInput" type="text" >
+        <label>Product Price : </label>
+        <input class="form-control  my-2 " id="productPriceInput" type="number" >
+        <label>Product Category : </label>
+        <input class="form-control  my-2 " id="productCategoryInput" type="text" >
+        <label>Product Desc : </label>
+        <textarea class="form-control  my-2 " id="productDescInput"  ></textarea>
+        <button onclick="addProduct()" id="formButton" class="btn btn-info mt-2">addProduct</button>
+
+
+        <div class="w-50 m-auto my-4 search ">
+            <input  onkeyup="searchProduct(this.value)" class="form-control my-5  " placeholder="search by product name.." type="text">
+
+            <div id="searchResult"class="w-100"></div>
+        </div>
+
+
+
+        <table class="table my-5  by-4">
+            <thead>
+                <th>index</th>
+                <th>product Name</th>
+                <th>product Price</th>
+                <th>product Category</th>
+                <th>product Desc</th>
+                <th> update</th>
+                <th>delete</th>
+            </thead>
+            <tbody id="tBody">
+                
+            </tbody>
+        </table>
+
+
+
+    </div>
+  <script src="js/js-index.js"></script>
+</body>
+</html>
